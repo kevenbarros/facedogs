@@ -1,0 +1,93 @@
+.photo{
+  margin: auto;
+  height: 36rem;
+  border-radius: 0.2rem;
+  background: white;
+  display: grid;
+  grid-template-columns: 36rem 20rem;
+  grid-template-rows: auto 1fr auto ;
+  overflow: hidden;
+  opacity: 0;
+  /*transform : scale(0.8) translateX(10px) rotate(10deg) translateY(5px) ;*/
+  transform: scale(0.8);
+  animation: daora 0.4s forwards ;
+}
+@keyframes daora{
+  to{
+    opacity: initial;
+    transform: initial;
+  }
+}
+.detalhe{
+  padding: 2rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  
+}
+.img{
+  grid-row: 1/4;
+}
+.comments{
+  padding: 0 2rem;
+}
+
+
+.visuEauthor{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  align-items: center;
+}
+.visuEauthor:hover{
+  text-decoration: none;
+}
+.visualizaçao::before{
+  content: "";
+  width: 16px;
+  height: 10px;
+  margin-right: 0.5rem;
+  background: url("../../Assets/visualizacao-black.svg") no-repeat;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+.atributos{
+  display: flex;
+  font-size: 19px;
+  justify-content: stretch;
+  font-weight: bold;
+  gap: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.atributos li::before{
+  content: '';
+  width: 2px;
+  height: 20px;
+  background: currentColor;
+  display: inline-block;
+  position: relative;
+  margin-right: 0.5rem;
+  margin-top: 5px;
+}
+@media (max-width: 64rem) {
+  .photo{
+    height: auto;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    grid-template-columns: minmax(20rem, 40rem);
+  }
+  .img{
+    grid-row: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
